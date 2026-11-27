@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeloShip | Fast, Safe, and Always on Time - Solusi Logistik Terpercaya</title>
+  <meta name="description"
+    content="VeloShip - Layanan pengiriman kilat, kargo aman, dan solusi logistik terpercaya dengan garansi Fast, Safe, and Always on Time.">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+
+      <!-- Brand Logo & Name -->
+      <a href="#home" class="brand-wrapper" id="brandLogoLink">
+        <img src="assets/logo.jpg" alt="VeloShip Logo" class="brand-logo-img">
+        <div class="brand-info">
+          <div class="brand-name">Velo<span class="accent">Ship</span></div>
+          <span class="brand-slogan-pill">Fast &bull; Safe &bull; On Time</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Tabs -->
+      <nav class="nav-wrapper" id="navWrapper">
+        <ul class="nav-tabs">
+          <li>
+            <button type="button" class="nav-tab-btn active" data-target-tab="home">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Beranda</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-tab-btn" data-target-tab="tracking">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Lacak Resi</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-tab-btn" data-target-tab="services">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>Layanan</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-tab-btn" data-target-tab="rates">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+              </svg>
+              <span>Cek Tarif</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-tab-btn" data-target-tab="promos">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              <span>Promo</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-tab-btn" data-target-tab="about">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Tentang Kami</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-tab-btn" data-target-tab="contact">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Kontak</span>
+            </button>
+          </li>
+          <!-- Tab Dashboard (visible if logged in) -->
+          <li id="navTabDashboard" style="display: none;">
+            <button type="button" class="nav-tab-btn" data-target-tab="dashboard">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Panel Akun</span>
+              <span class="tab-badge">3</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Auth Action Buttons in Header -->
+      <div class="header-actions">
+        <!-- Unauthenticated View -->
+        <div id="unauthNavActions" style="display: flex; gap: 0.5rem;">
+          <button type="button" class="btn btn-outline btn-sm open-login-modal-btn">
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Masuk</span>
+          </button>
+          <button type="button" class="btn btn-primary btn-sm open-login-modal-btn">
+            <span>Daftar Sekarang</span>
+          </button>
+        </div>
+
+        <!-- Authenticated View (User Profile) -->
+        <div id="userNavActions" style="display: none; align-items: center; gap: 0.6rem;">
+          <button type="button" class="user-menu-btn" data-target-tab="dashboard" onclick="switchTab('dashboard')">
+            <div class="user-avatar-small" id="navUserAvatarInitial">V</div>
+            <span id="navUserName">Vincent</span>
+          </button>
+          <button type="button" class="btn btn-ghost btn-sm" id="logoutBtn" title="Keluar">
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Nav Hamburger -->
+        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Buka Menu">
+          <svg class="icon" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER (SLIDE / FADE TAB VIEWS)
+       ========================================================================== -->
+  <main class="main-content">
+
+    <!-- ----------------------------------------------------------------------
+         TAB 1: BERANDA (HOME)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-home" class="tab-view active">
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-bg-shapes">
+          <div class="bg-orb bg-orb-1"></div>
+          <div class="bg-orb bg-orb-2"></div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-content fade-cascade-1">
+            <div class="hero-badge-slogan">
+              <span class="badge-dot"></span>
+              <span class="hero-badge-text">VeloShip Official Logistics Platform</span>
+            </div>
+
+            <h1 class="hero-title">
+              Pengiriman Modern:<br>
+              <span class="highlight-orange">Fast, Safe,</span><br>
+              and <span class="highlight-blue">Always on Time</span>.
+            </h1>
+
+            <p class="hero-subtitle">
+              Solusi logistik ekspres generasi terbaru yang menghubungkan bisnis dan kebutuhan personal Anda ke seluruh
+              penjuru Indonesia dengan kecepatan terukur, keamanan terlindungi, dan kepastian waktu tiba.
+            </p>
+
+            <div class="hero-cta-group">
+              <button type="button" class="btn btn-primary btn-lg" onclick="switchTab('tracking')">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Mulai Lacak Kiriman</span>
+              </button>
+              <button type="button" class="btn btn-outline btn-lg" onclick="switchTab('rates')">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                  <line x1="8" y1="6" x2="16" y2="6"></line>
+                </svg>
+                <span>Hitung Estimasi Biaya</span>
+              </button>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="stat-item">
+                <span class="stat-number">99.8%</span>
+                <span class="stat-label">Tepat Waktu (On-Time SLA)</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">450+</span>
+                <span class="stat-label">Kota & Kabupaten Terhubung</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2.5M+</span>
+                <span class="stat-label">Paket Sukses Terkirim</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Quick Widget Card -->
+          <div class="hero-widget-card fade-cascade-2">
+            <div class="widget-tabs-nav">
+              <button type="button" class="widget-tab-btn active" data-widget="track">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Lacak Resi Cepat</span>
+              </button>
+              <button type="button" class="widget-tab-btn" data-widget="rate">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                  <line x1="8" y1="6" x2="16" y2="6"></line>
+                </svg>
+                <span>Hitung Tarif Cepat</span>
+              </button>
+            </div>
+
+            <!-- Panel Lacak Resi -->
+            <div class="widget-panel active" id="widget-panel-track">
+              <form id="heroTrackForm">
+                <div class="form-group">
+                  <label class="form-label" for="heroTrackingInput">
+                    <span>Masukkan Nomor Resi VeloShip</span>
+                    <span style="font-size: 0.72rem; color: var(--velo-blue); font-weight: 700;">REAL-TIME GPS</span>
+                  </label>
+                  <div class="input-with-icon">
+                    <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="heroTrackingInput" class="input-control"
+                      placeholder="Contoh: VELO-8829104-ID" value="VELO-8829104-ID">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <svg class="icon icon-sm" viewBox="0 0 24 24">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <span>Lacak Paket Sekarang</span>
+                </button>
+              </form>
+
+              <div class="quick-samples">
+                <div class="quick-samples-title">Pilih Sampel Resi Pengujian:</div>
+                <div class="sample-chips">
+                  <button type="button" class="sample-chip" data-code="VELO-8829104-ID">VELO-8829104-ID</button>
+                  <button type="button" class="sample-chip" data-code="VELO-5591023-EX">VELO-5591023-EX</button>
+                  <button type="button" class="sample-chip" data-code="VELO-1102934-ID">VELO-1102934-ID</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel Cek Tarif Cepat -->
+            <div class="widget-panel" id="widget-panel-rate">
+              <form id="heroRateForm">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label">Asal Pengiriman</label>
+                    <div class="input-with-icon">
+                      <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      </svg>
+                      <input type="text" class="input-control" value="Jakarta" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Tujuan</label>
+                    <div class="input-with-icon">
+                      <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      </svg>
+                      <input type="text" class="input-control" value="Surabaya" readonly>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Perkiraan Berat Paket</label>
+                  <div class="input-with-icon">
+                    <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                      </path>
+                    </svg>
+                    <input type="text" class="input-control" value="1.0 Kilogram" readonly>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-orange" style="width: 100%;">
+                  <svg class="icon icon-sm" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                  <span>Buka Kalkulator Tarif Lengkap</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Pillars Section (Fast, Safe, Always on Time) -->
+      <div class="pillars-section section-container">
+        <div class="section-header fade-cascade-1">
+          <div class="section-tag">Nilai Unggulan Kami</div>
+          <h2 class="section-title">Dedikasi Tiga Komitmen Utama VeloShip</h2>
+          <p class="section-desc">
+            Slogan kami bukan sekadar kata-kata. Kami membangun setiap lini infrastruktur dan armada dengan standar
+            tertinggi untuk menjamin paket Anda tiba dengan sempurna.
+          </p>
+        </div>
+
+        <div class="pillars-grid fade-cascade-2">
+
+          <!-- Pillar 1: Fast -->
+          <div class="pillar-card pillar-fast">
+            <div class="pillar-icon-box">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <span class="pillar-label">Komitmen 1</span>
+            <h3 class="pillar-title">Fast (Kecepatan Maksimal)</h3>
+            <p class="pillar-desc">
+              Pengiriman super cepat dengan jalur transit langsung tanpa perhentian berlebih. Didukung armada darat dan
+              udara yang terkoneksi tanpa henti 24 jam.
+            </p>
+            <ul class="pillar-features">
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Same-Day & Next-Day Express Delivery</span>
+              </li>
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Automated Smart Sorting Center</span>
+              </li>
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Jemput Paket Cepat di Lokasi</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Safe -->
+          <div class="pillar-card pillar-safe">
+            <div class="pillar-icon-box">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <span class="pillar-label">Komitmen 2</span>
+            <h3 class="pillar-title">Safe (Keamanan Terlindungi)</h3>
+            <p class="pillar-desc">
+              Setiap kiriman dilindungi dengan standar pengemasan berlapis, proteksi asuransi menyeluruh, serta
+              pemantauan kamera dan segel digital anti-rusak.
+            </p>
+            <ul class="pillar-features">
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Garansi Proteksi Asuransi 100%</span>
+              </li>
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Penanganan Khusus Barang Rentan (Fragile)</span>
+              </li>
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Verifikasi OTP Serah Terima Paket</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3: Always on Time -->
+          <div class="pillar-card pillar-time">
+            <div class="pillar-icon-box">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span class="pillar-label">Komitmen 3 &bull; Garansi</span>
+            <h3 class="pillar-title">Always on Time (Garansi 100% Tepat Waktu)</h3>
+            <p class="pillar-desc">
+              Jika paket Anda tiba melebihi estimasi waktu SLA resmi, kami berikan pengembalian 100% ongkos kirim.
+              Ketepatan waktu adalah janji kami kepada setiap pelanggan.
+            </p>
+            <ul class="pillar-features">
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Garansi 100% Ongkir Kembali Jika Terlambat</span>
+              </li>
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Estimasi Waktu Tiba (ETA) Akurat Real-Time</span>
+              </li>
+              <li class="pillar-feature-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Pemantauan Jalur Armada Digital 24/7</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Interactive CTA Banner & Promo Teaser -->
+      <div class="section-container" style="padding-top: 0;">
+        <div
+          style="background: linear-gradient(135deg, var(--slate-900), #0b2545); border-radius: var(--radius-xl); padding: 3rem 2.5rem; color: white; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+          <div>
+            <div
+              style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(245, 124, 0, 0.2); color: #FFA726; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem;">
+              Garansi Terjamin &bull; Promo Spesial Aktif
+            </div>
+            <h3 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em;">
+              Siap Kirim Paket Lebih Cepat, Aman & Hemat?
+            </h3>
+            <p style="color: var(--slate-300); font-size: 1rem; max-width: 600px;">
+              Gunakan kupon diskon hingga 30% untuk pengguna baru dan nikmati perlindungan 100% garansi uang kembali
+              jika barang tidak sampai tepat waktu.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+            <button type="button" class="btn btn-orange btn-lg" onclick="switchTab('promos')">
+              <span>Lihat Promo & Garansi</span>
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+            </button>
+            <a href="https://wa.me/6281517666126" target="_blank" class="btn btn-whatsapp btn-lg">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+              <span>Chat CS WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB 2: LACAK RESI (TRACKING)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-tracking" class="tab-view">
+      <div class="section-container">
+
+        <div class="section-header fade-cascade-1">
+          <div class="section-tag">Pelacakan Real-Time</div>
+          <h2 class="section-title">Lacak Lokasi & Status Kiriman Anda</h2>
+          <p class="section-desc">
+            Pantau posisi terkini paket kiriman Anda dari tahap penjemputan awal, transit hub, hingga serah terima di
+            alamat tujuan.
+          </p>
+        </div>
+
+        <!-- Search Bar Card -->
+        <div class="tracking-search-box fade-cascade-2">
+          <form id="mainTrackingForm">
+            <div class="tracking-input-bar">
+              <div class="input-with-icon" style="flex: 1;">
+                <svg class="icon input-icon-left" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="mainTrackingInput" class="input-control"
+                  placeholder="Ketik nomor resi Anda (Contoh: VELO-8829104-ID)" value="VELO-8829104-ID">
+              </div>
+              <button type="submit" id="mainTrackingBtn" class="btn btn-primary btn-lg">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Lacak Sekarang</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="quick-samples">
+            <div class="quick-samples-title">Klik sampel nomor resi untuk simulasi pelacakan:</div>
+            <div class="sample-chips">
+              <button type="button" class="sample-chip" data-code="VELO-8829104-ID">VELO-8829104-ID (Sedang
+                Transit)</button>
+              <button type="button" class="sample-chip" data-code="VELO-5591023-EX">VELO-5591023-EX (Telah
+                Diterima)</button>
+              <button type="button" class="sample-chip" data-code="VELO-1102934-ID">VELO-1102934-ID (Sedang Diantar
+                Kurir)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Tracking Result Display -->
+        <div id="trackingResultCard" class="tracking-result-card fade-cascade-3">
+          <!-- Filled dynamically by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB 3: LAYANAN (SERVICES)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-services" class="tab-view">
+      <div class="section-container">
+
+        <div class="section-header fade-cascade-1">
+          <div class="section-tag">Solusi Terlengkap</div>
+          <h2 class="section-title">Pilihan Layanan Pengiriman VeloShip</h2>
+          <p class="section-desc">
+            Dari dokumen urgent, paket e-commerce, hingga kargo bertonase besar, kami menyediakan solusi pengiriman yang
+            disesuaikan dengan kebutuhan Anda.
+          </p>
+        </div>
+
+        <div class="services-grid-4 fade-cascade-2">
+
+          <!-- Service 1: Velo Regular -->
+          <div class="service-card">
+            <span class="service-tag" style="background: var(--velo-blue-light); color: var(--velo-blue);">Hemat &
+              Terpercaya</span>
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="service-name">Velo Regular</h3>
+            <p class="service-desc">
+              Layanan pengiriman standar harian dengan jangkauan terlengkap hingga ke pelosok kecamatan dengan tarif
+              ekonomis dan estimasi terukur.
+            </p>
+            <ul class="service-perks">
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Estimasi 2 - 3 Hari Kerja</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Jangkauan Nasional 450+ Kota</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Pick-up Gratis Tanpa Minimal</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline" onclick="switchTab('rates')">
+              <span>Hitung Tarif</span>
+            </button>
+          </div>
+
+          <!-- Service 2: Velo Express -->
+          <div class="service-card" style="border-color: var(--velo-orange);">
+            <span class="service-tag express">Prioritas Kilat</span>
+            <div class="service-icon" style="background: var(--velo-orange); color: white;">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-name">Velo Express</h3>
+            <p class="service-desc">
+              Layanan ekspres super kilat dengan garansi tiba besok hari (24 jam) antar kota besar di Indonesia.
+              Dilindungi komitmen Garansi Tepat Waktu.
+            </p>
+            <ul class="service-perks">
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Estimasi Tiba 24 Jam Kerja</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Garansi 100% Ongkir Kembali</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Prioritas Jalur Udara Langsung</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-orange" onclick="switchTab('rates')">
+              <span>Hitung Tarif</span>
+            </button>
+          </div>
+
+          <!-- Service 3: Velo Business -->
+          <div class="service-card">
+            <span class="service-tag" style="background: #EDE9FE; color: #7C3AED;">Solusi Korporat</span>
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="service-name">Velo Business</h3>
+            <p class="service-desc">
+              Solusi logistik terpadu untuk pelaku UMKM, e-commerce store, dan perusahaan B2B dengan tarif kontrak
+              khusus, pembayaran berkala, dan integrasi API.
+            </p>
+            <ul class="service-perks">
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Tarif Khusus Diskon Volume</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated Account Manager</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dashboard Multi-Resi & API</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline" onclick="switchTab('rates')">
+              <span>Hitung Tarif</span>
+            </button>
+          </div>
+
+          <!-- Service 4: Velo Cargo -->
+          <div class="service-card">
+            <span class="service-tag cargo">Muatan Besar</span>
+            <div class="service-icon">
+              <svg class="icon icon-lg" viewBox="0 0 24 24">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="service-name">Velo Cargo</h3>
+            <p class="service-desc">
+              Pengiriman muatan besar dan berat minimal 10 Kg hingga puluhan ton via armada truk box darat dan kontainer
+              laut dengan tarif per-Kg paling hemat.
+            </p>
+            <ul class="service-perks">
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Tarif Per-Kg Paling Murah</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Minimal Berat Mulai 10 Kg</span>
+              </li>
+              <li class="service-perk-item">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Armada Fuso & Kontainer FCL/LCL</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-outline" onclick="switchTab('rates')">
+              <span>Hitung Tarif</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB 4: CEK TARIF (RATES CALCULATOR)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-rates" class="tab-view">
+      <div class="section-container">
+
+        <div class="section-header fade-cascade-1">
+          <div class="section-tag">Kalkulator Resmi</div>
+          <h2 class="section-title">Hitung Ongkos Kirim VeloShip</h2>
+          <p class="section-desc">
+            Dapatkan estimasi biaya kirim transparan dan akurat tanpa biaya tersembunyi.
+          </p>
+        </div>
+
+        <div class="calculator-card fade-cascade-2">
+          <div class="calc-grid">
+
+            <!-- Input Form Side -->
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--slate-900); margin-bottom: 1.5rem;">
+                Parameter Pengiriman
+              </h3>
+
+              <form id="shippingCalcForm">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="calcOrigin">Kota Asal</label>
+                    <select id="calcOrigin" class="input-control">
+                      <option value="Jakarta" selected>Jakarta (DKI)</option>
+                      <option value="Bandung">Bandung (Jawa Barat)</option>
+                      <option value="Surabaya">Surabaya (Jawa Timur)</option>
+                      <option value="Semarang">Semarang (Jawa Tengah)</option>
+                      <option value="Medan">Medan (Sumatera Utara)</option>
+                      <option value="Denpasar">Denpasar (Bali)</option>
+                      <option value="Makassar">Makassar (Sulawesi Selatan)</option>
+                      <option value="Yogyakarta">Yogyakarta (DIY)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="calcDest">Kota Tujuan</label>
+                    <select id="calcDest" class="input-control">
+                      <option value="Surabaya" selected>Surabaya (Jawa Timur)</option>
+                      <option value="Jakarta">Jakarta (DKI)</option>
+                      <option value="Bandung">Bandung (Jawa Barat)</option>
+                      <option value="Semarang">Semarang (Jawa Tengah)</option>
+                      <option value="Medan">Medan (Sumatera Utara)</option>
+                      <option value="Denpasar">Denpasar (Bali)</option>
+                      <option value="Makassar">Makassar (Sulawesi Selatan)</option>
+                      <option value="Yogyakarta">Yogyakarta (DIY)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="calcWeight">Berat Kiriman (Kg)</label>
+                    <input type="number" id="calcWeight" class="input-control" value="2" min="1" max="1000" step="0.5">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="calcService">Pilihan Layanan</label>
+                    <select id="calcService" class="input-control">
+                      <option value="regular">Velo Regular (2 - 3 Hari)</option>
+                      <option value="express" selected>Velo Express (Besok Tiba / 24 Jam Garansi)</option>
+                      <option value="business">Velo Business (Prioritas B2B & Korporat)</option>
+                      <option value="cargo">Velo Cargo (Muatan Besar >10 Kg)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                  <svg class="icon icon-sm" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                  <span>Perbarui Perhitungan</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Result Side -->
+            <div class="calc-result-panel">
+              <div>
+                <span class="section-tag" style="margin-bottom: 0.5rem;">Estimasi Biaya Resmi</span>
+                <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--slate-900);" id="calcResultService">
+                  Velo Express
+                </h4>
+                <div style="font-size: 0.85rem; color: var(--slate-500); margin-top: 0.2rem;" id="calcResultRoute">
+                  Jakarta menuju Surabaya (2 Kg)
+                </div>
+
+                <div class="price-display-box">
+                  <div class="price-label">Total Ongkos Kirim</div>
+                  <div class="price-value" id="calcResultPrice">Rp 31.000</div>
+                  <div class="price-estimate-time">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span id="calcResultEta">Besok Tiba (24 Jam)</span>
+                  </div>
+                </div>
+
+                <div style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.5;">
+                  Harga telah termasuk perlindungan asuransi standar dan fasilitas pelacakan real-time digital VeloShip.
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <button type="button" class="btn btn-orange" style="width: 100%;" onclick="openAuthModal('login')">
+                  <span>Pesan Penjemputan Sekarang</span>
+                  <svg class="icon icon-sm" viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB: PROMO & GARANSI (PROMOS & ON-TIME GUARANTEE)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-promos" class="tab-view">
+      <div class="section-container">
+
+        <div class="section-header fade-cascade-1">
+          <div class="section-tag">Voucher Hemat & Proteksi Terjamin</div>
+          <h2 class="section-title">Promo Menarik & Garansi Tepat Waktu</h2>
+          <p class="section-desc">
+            Kirim barang lebih hemat dengan voucher promo resmi VeloShip, serta nikmati ketenangan penuh dengan
+            perlindungan Garansi 100% Ongkir Kembali jika barang tidak sampai sesuai jadwal.
+          </p>
+        </div>
+
+        <!-- Garansi Box -->
+        <div class="guarantee-box fade-cascade-2">
+          <div class="guarantee-grid">
+            <div>
+              <div class="guarantee-badge">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Always on Time Pledge</span>
+              </div>
+              <h3 class="guarantee-title">Garansi Pasti Tepat Waktu atau 100% Ongkir Kembali</h3>
+              <p class="guarantee-desc">
+                Sesuai slogan kami <em>"Fast, Safe, and Always on Time"</em>, waktu Anda adalah prioritas tertinggi
+                kami. Jika kiriman Anda melalui <strong>Velo Express</strong>, <strong>Velo Regular</strong>,
+                <strong>Velo Business</strong>, atau <strong>Velo Cargo</strong> mengalami keterlambatan dari batas SLA
+                yang tertera pada resi, Anda berhak memperoleh pengembalian dana 100% biaya ongkos kirim secara
+                langsung.
+              </p>
+
+              <div class="guarantee-steps">
+                <div class="guarantee-step-item">
+                  <span class="guarantee-step-num">Langkah 01</span>
+                  <div class="guarantee-step-title">Periksa Status Resi</div>
+                  <div class="guarantee-step-desc">Buka menu Lacak Resi dan periksa riwayat waktu tiba paket Anda.</div>
+                </div>
+                <div class="guarantee-step-item">
+                  <span class="guarantee-step-num">Langkah 02</span>
+                  <div class="guarantee-step-title">Hubungi WhatsApp CS</div>
+                  <div class="guarantee-step-desc">Kirimkan nomor resi Anda ke Customer Service WhatsApp di
+                    0815-1766-6126.</div>
+                </div>
+                <div class="guarantee-step-item">
+                  <span class="guarantee-step-num">Langkah 03</span>
+                  <div class="guarantee-step-title">Dana Dikembalikan</div>
+                  <div class="guarantee-step-desc">100% biaya ongkos kirim dikembalikan ke rekening/saldo Anda dalam
+                    1x24 jam kerja.</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="guarantee-shield-card">
+                <div class="guarantee-shield-icon">
+                  <svg class="icon icon-lg" style="color: white;" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="guarantee-seal-title">100% Guaranteed</div>
+                <div class="guarantee-seal-desc">Perlindungan kepastian waktu pengiriman tanpa proses klaim yang
+                  berbelit-belit.</div>
+                <div style="margin-top: 1.5rem;">
+                  <a href="https://wa.me/6281517666126?text=Halo%20VeloShip,%20saya%20ingin%20konsultasi%20mengenai%20klaim%20Garansi%20Tepat%20Waktu."
+                    target="_blank" class="btn btn-whatsapp btn-sm" style="width: 100%;">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24">
+                      <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                      </path>
+                    </svg>
+                    <span>Ajukan Klaim via WA</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Voucher Promos Section -->
+        <div style="margin-top: 3.5rem;">
+          <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+            <div class="section-tag" style="background: var(--velo-orange-light); color: var(--velo-orange);">Kupon
+              Diskon Aktif</div>
+            <h3 class="section-title" style="font-size: 1.85rem;">Pilihan Voucher Promo VeloShip</h3>
+            <p class="section-desc">Klik tombol "Salin Kode" pada promo yang Anda inginkan untuk digunakan saat
+              pengiriman.</p>
+          </div>
+
+          <div class="promos-grid fade-cascade-3">
+
+            <!-- Promo 1 -->
+            <div class="promo-card">
+              <span class="promo-card-ribbon">Member Baru</span>
+              <div>
+                <div class="promo-discount-tag">DISKON 25%</div>
+                <h4 class="promo-title">Voucher Pengguna Pertama</h4>
+                <p class="promo-desc">
+                  Nikmati potongan 25% tanpa minimum transaksi untuk pengiriman pertama Anda menggunakan layanan Velo
+                  Regular atau Velo Express.
+                </p>
+              </div>
+              <div class="voucher-box">
+                <span class="voucher-code">VELOBARU25</span>
+                <button type="button" class="btn-copy-code" onclick="copyVoucherCode('VELOBARU25')">
+                  Salin Kode
+                </button>
+              </div>
+            </div>
+
+            <!-- Promo 2 -->
+            <div class="promo-card">
+              <span class="promo-card-ribbon">B2B & UMKM</span>
+              <div>
+                <div class="promo-discount-tag">DISKON 30%</div>
+                <h4 class="promo-title">Velo Business Special</h4>
+                <p class="promo-desc">
+                  Diskon 30% biaya kirim untuk pelaku usaha toko online dan korporasi yang menggunakan layanan Velo
+                  Business (min. 5 paket).
+                </p>
+              </div>
+              <div class="voucher-box">
+                <span class="voucher-code">VELOBISNIS30</span>
+                <button type="button" class="btn-copy-code" onclick="copyVoucherCode('VELOBISNIS30')">
+                  Salin Kode
+                </button>
+              </div>
+            </div>
+
+            <!-- Promo 3 -->
+            <div class="promo-card">
+              <span class="promo-card-ribbon">Muatan Besar</span>
+              <div>
+                <div class="promo-discount-tag">POTONGAN 50RB</div>
+                <h4 class="promo-title">Velo Cargo Hemat</h4>
+                <p class="promo-desc">
+                  Potongan flat Rp 50.000 untuk pengiriman barang bertonase besar via armada truk box atau kontainer
+                  (berat min. 20 Kg).
+                </p>
+              </div>
+              <div class="voucher-box">
+                <span class="voucher-code">KARGOMURAH</span>
+                <button type="button" class="btn-copy-code" onclick="copyVoucherCode('KARGOMURAH')">
+                  Salin Kode
+                </button>
+              </div>
+            </div>
+
+            <!-- Promo 4 -->
+            <div class="promo-card">
+              <span class="promo-card-ribbon">Bebas Ongkir</span>
+              <div>
+                <div class="promo-discount-tag">GRATIS ONGKIR</div>
+                <h4 class="promo-title">Bebas Ongkir s.d 20Rb</h4>
+                <p class="promo-desc">
+                  Bebas biaya kirim pengiriman antar kota hingga Rp 20.000 untuk pengiriman paket reguler di seluruh
+                  rute Indonesia.
+                </p>
+              </div>
+              <div class="voucher-box">
+                <span class="voucher-code">GRATISONGKIR</span>
+                <button type="button" class="btn-copy-code" onclick="copyVoucherCode('GRATISONGKIR')">
+                  Salin Kode
+                </button>
+              </div>
+            </div>
+
+            <!-- Promo 5 -->
+            <div class="promo-card">
+              <span class="promo-card-ribbon">Jabodetabek</span>
+              <div>
+                <div class="promo-discount-tag">DISKON 15%</div>
+                <h4 class="promo-title">Promo Rute Jabodetabek</h4>
+                <p class="promo-desc">
+                  Tarif hemat khusus pengiriman area Jakarta, Tangerang (Cipondoh, Green Lake City), Depok, Bogor, dan
+                  Bekasi.
+                </p>
+              </div>
+              <div class="voucher-box">
+                <span class="voucher-code">VELOJABODETABEK</span>
+                <button type="button" class="btn-copy-code" onclick="copyVoucherCode('VELOJABODETABEK')">
+                  Salin Kode
+                </button>
+              </div>
+            </div>
+
+            <!-- Promo 6 -->
+            <div class="promo-card">
+              <span class="promo-card-ribbon">Express 24 Jam</span>
+              <div>
+                <div class="promo-discount-tag">CASHBACK 20%</div>
+                <h4 class="promo-title">Cashback Kilat Prioritas</h4>
+                <p class="promo-desc">
+                  Dapatkan cashback saldo 20% untuk setiap pemesanan layanan Velo Express dengan garansi kiriman tiba
+                  keesokan harinya.
+                </p>
+              </div>
+              <div class="voucher-box">
+                <span class="voucher-code">VELOEXPRESS20</span>
+                <button type="button" class="btn-copy-code" onclick="copyVoucherCode('VELOEXPRESS20')">
+                  Salin Kode
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB 5: TENTANG KAMI (ABOUT)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-about" class="tab-view">
+      <div class="section-container">
+
+        <div class="about-hero-block fade-cascade-1">
+          <div class="about-tagline">Fast, Safe, and Always on Time</div>
+          <h2 class="about-main-title">Membangun Jaringan Pengiriman Masa Depan di Indonesia</h2>
+          <p class="about-main-desc">
+            VeloShip lahir dari visi untuk merevolusi efisiensi distribusi logistik di Indonesia. Kami memadukan
+            teknologi pelacakan satelit, algoritma rute prediktif, dan armada terintegrasi demi memberikan pengalaman
+            pengiriman yang tanpa hambatan, transparan, dan terpercaya bagi setiap individu maupun korporasi.
+          </p>
+        </div>
+
+        <div class="section-header fade-cascade-2" style="text-align: left; margin-bottom: 2rem;">
+          <div class="section-tag">Prinsip Kerja Kami</div>
+          <h3 class="section-title">Nilai Fondasi Perusahaan</h3>
+        </div>
+
+        <div class="values-grid fade-cascade-3">
+          <div class="value-card">
+            <span class="value-badge">Pilar 01</span>
+            <h4 class="value-title">Integritas & Keamanan</h4>
+            <p class="value-desc">
+              Menjaga setiap paket seolah milik kami sendiri dengan standar pengamanan terbaik, integritas petugas, dan
+              tanggung jawab penuh di setiap jengkal rute pengantaran.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-badge">Pilar 02</span>
+            <h4 class="value-title">Ketepatan Waktu Bergaransi</h4>
+            <p class="value-desc">
+              Waktu adalah hal paling berharga bagi bisnis Anda. Kami mengoptimalkan jadwal operasional dan jalur
+              logistik untuk memastikan kepatuhan jadwal tiba di atas 99%.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="value-badge">Pilar 03</span>
+            <h4 class="value-title">Inovasi Berkelanjutan</h4>
+            <p class="value-desc">
+              Penerapan armada ramah lingkungan, sistem sortir otomatis bertenaga AI, dan antarmuka digital yang
+              memudahkan pelanggan mengelola kiriman dalam genggaman.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB 6: KONTAK & FAQ (CONTACT)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-contact" class="tab-view">
+      <div class="section-container">
+
+        <div class="section-header fade-cascade-1">
+          <div class="section-tag">Layanan Pelanggan 24/7</div>
+          <h2 class="section-title">Hubungi Tim Dukungan VeloShip</h2>
+          <p class="section-desc">
+            Punya pertanyaan mengenai kiriman atau ingin berkonsultasi mengenai kerja sama logistik perusahaan? Kami
+            siap membantu Anda.
+          </p>
+        </div>
+
+        <div class="contact-grid fade-cascade-2">
+
+          <!-- Contact Details Card -->
+          <div class="contact-info-card">
+            <div>
+              <div class="modal-brand-badge">
+                <img src="assets/logo.jpg" alt="VeloShip" style="width: 32px; height: 32px; border-radius: 8px;">
+                <span style="font-weight: 800; font-size: 1.25rem;">VeloShip Care</span>
+              </div>
+              <p style="color: var(--slate-300); font-size: 0.92rem; margin-top: 0.5rem;">
+                Pusat bantuan pelanggan resmi beroperasi sepanjang waktu 24 jam sehari, 7 hari seminggu.
+              </p>
+
+              <div class="contact-info-list">
+                <div class="contact-info-item">
+                  <div class="contact-icon-box" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-title">Customer Service WhatsApp (Utama)</div>
+                    <div class="contact-info-val"
+                      style="font-size: 1.15rem; color: #25D366; font-family: var(--font-mono);">0815-1766-6126</div>
+                    <div style="font-size: 0.78rem; color: var(--slate-300); margin-top: 0.2rem;">Respon instan & aktif
+                      24 jam</div>
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <div class="contact-icon-box">
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-title">Alamat Kantor Pusat VeloShip</div>
+                    <div class="contact-info-val" style="font-size: 0.92rem; line-height: 1.5; font-weight: 500;">
+                      Jl. Green Lake City Boulevard, RT.005/RW.008, Gondrong, Kec. Cipondoh, Kota Tangerang, Banten
+                      15147
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <div class="contact-icon-box">
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-title">Jam Operasional CS & Pick-up</div>
+                    <div class="contact-info-val" style="font-size: 0.95rem;">24 Jam Non-Stop Setiap Hari</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <a href="https://wa.me/6281517666126?text=Halo%20Customer%20Service%20VeloShip,%20saya%20butuh%20bantuan%20mengenai%20pengiriman."
+                  target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+                  <svg class="icon icon-sm" viewBox="0 0 24 24">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                    </path>
+                  </svg>
+                  <span>Buka Chat WhatsApp CS (0815-1766-6126)</span>
+                </a>
+              </div>
+            </div>
+
+            <div
+              style="font-size: 0.8rem; color: var(--slate-400); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem;">
+              Slogan Kami: <strong>Fast, Safe, and Always on Time</strong>
+            </div>
+          </div>
+
+          <!-- Message Form Card -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.4rem;">
+              Kirim Pesan ke Customer Service
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--slate-500); margin-bottom: 1.5rem;">
+              Pesan Anda akan langsung diteruskan ke WhatsApp Customer Service VeloShip.
+            </p>
+
+            <form id="contactUsForm">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Nama Lengkap</label>
+                <input type="text" id="contactName" class="input-control" placeholder="Nama Anda" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Nomor WhatsApp Anda</label>
+                <input type="tel" id="contactPhone" class="input-control" placeholder="Contoh: 0812xxxxxxxx">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Pertanyaan / Keluhan / Nomor Resi</label>
+                <textarea id="contactMessage" class="input-control" rows="4"
+                  placeholder="Tuliskan nomor resi atau detail pesan Anda..." style="resize: vertical;"
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                  </path>
+                </svg>
+                <span>Kirim via WhatsApp CS</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="faq-accordion fade-cascade-3">
+          <div class="section-header" style="text-align: left; margin-bottom: 1rem;">
+            <div class="section-tag">FAQ</div>
+            <h3 class="section-title" style="font-size: 1.75rem;">Pertanyaan yang Sering Diajukan</h3>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Bagaimana cara kerja jaminan kepastian waktu (Always on Time) VeloShip?</span>
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Setiap kiriman kami memiliki komitmen Service Level Agreement (SLA). Jika paket Anda tiba melampaui
+              estimasi waktu tiba yang tertera pada resi karena kendala teknis internal kami, Anda berhak mendapatkan
+              pengembalian 100% ongkos kirim ke saldo akun VeloShip Anda.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Apakah barang berharga mendapatkan asuransi otomatis?</span>
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Ya, seluruh pengiriman melalui layanan Velo Regular, Velo Express, Velo Business, dan Velo Cargo secara
+              otomatis terproteksi asuransi standar dan dilindungi komitmen Garansi Tepat Waktu. Untuk barang berharga
+              bernilai tinggi, Anda dapat menambahkan proteksi asuransi premium saat penjemputan atau melalui CS
+              WhatsApp kami.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Apakah kurir VeloShip bisa menjemput paket langsung ke rumah/toko?</span>
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Tentu saja. Anda cukup masuk ke akun VeloShip Anda, pilih "Pesan Penjemputan", tentukan alamat dan jumlah
+              paket, dan kurir kami akan tiba dalam kurun waktu 45 menit tanpa biaya penjemputan tambahan.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         TAB 7: DASHBOARD PELANGGAN (AUTHENTICATED VIEW)
+         ---------------------------------------------------------------------- -->
+    <section id="tab-dashboard" class="tab-view">
+      <div class="section-container">
+
+        <!-- User Profile Card -->
+        <div class="dashboard-user-card fade-cascade-1">
+          <div class="dashboard-user-header">
+            <div class="user-profile-info">
+              <div class="user-profile-avatar">V</div>
+              <div>
+                <h2 class="user-profile-name" id="dashProfileName">Vincent Pratama</h2>
+                <div class="user-profile-email" id="dashProfileEmail">vincent@veloship.id</div>
+                <div style="margin-top: 0.35rem;">
+                  <span class="status-badge in-transit" style="font-size: 0.75rem;" id="dashProfileBadge">
+                    Member Prioritas Terverifikasi
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline btn-sm" onclick="switchTab('rates')">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                  <line x1="8" y1="6" x2="16" y2="6"></line>
+                </svg>
+                <span>Cek Tarif Kiriman</span>
+              </button>
+              <button type="button" class="btn btn-primary btn-sm"
+                onclick="showToast('Fitur pembuatan resi baru siap digunakan.', 'success')">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Buat Pengiriman Baru</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
+            <div
+              style="background: var(--slate-50); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--slate-200);">
+              <div style="font-size: 0.75rem; color: var(--slate-500); text-transform: uppercase; font-weight: 700;">
+                Kiriman Aktif</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: var(--velo-blue); margin-top: 0.2rem;">3 Paket
+              </div>
+            </div>
+            <div
+              style="background: var(--slate-50); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--slate-200);">
+              <div style="font-size: 0.75rem; color: var(--slate-500); text-transform: uppercase; font-weight: 700;">
+                Paket Telah Tiba</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: var(--success); margin-top: 0.2rem;">128 Paket
+              </div>
+            </div>
+            <div
+              style="background: var(--slate-50); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--slate-200);">
+              <div style="font-size: 0.75rem; color: var(--slate-500); text-transform: uppercase; font-weight: 700;">
+                Ketepatan Waktu</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: var(--velo-orange); margin-top: 0.2rem;">100%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Shipments Table -->
+        <div class="fade-cascade-2"
+          style="background: white; border: 1px solid var(--slate-200); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-md);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--slate-900);">Daftar Pengiriman Terbaru</h3>
+              <p style="font-size: 0.85rem; color: var(--slate-500);">Klik nomor resi untuk melihat rute pelacakan
+                real-time secara instan.</p>
+            </div>
+          </div>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nomor Resi</th>
+                  <th>Layanan</th>
+                  <th>Rute Asal - Tujuan</th>
+                  <th>Status</th>
+                  <th>Estimasi Tiba</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button type="button" class="sample-chip" data-code="VELO-8829104-ID" style="cursor: pointer;">
+                      VELO-8829104-ID
+                    </button>
+                  </td>
+                  <td><strong>Velo Express</strong></td>
+                  <td>Jakarta &rarr; Surabaya</td>
+                  <td><span class="status-badge in-transit" style="font-size: 0.75rem;">Dalam Transit</span></td>
+                  <td>Besok, 25 Nov</td>
+                  <td>
+                    <button type="button" class="btn btn-outline btn-sm"
+                      onclick="switchTab('tracking'); executeTrackingSearch('VELO-8829104-ID');">
+                      Lacak
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button type="button" class="sample-chip" data-code="VELO-1102934-ID" style="cursor: pointer;">
+                      VELO-1102934-ID
+                    </button>
+                  </td>
+                  <td><strong>Velo Business</strong></td>
+                  <td>Semarang &rarr; Denpasar</td>
+                  <td><span class="status-badge out-for-delivery" style="font-size: 0.75rem;">Diantar Kurir</span></td>
+                  <td>Hari ini 17:00</td>
+                  <td>
+                    <button type="button" class="btn btn-outline btn-sm"
+                      onclick="switchTab('tracking'); executeTrackingSearch('VELO-1102934-ID');">
+                      Lacak
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button type="button" class="sample-chip" data-code="VELO-5591023-EX" style="cursor: pointer;">
+                      VELO-5591023-EX
+                    </button>
+                  </td>
+                  <td><strong>Velo Cargo</strong></td>
+                  <td>Bandung &rarr; Medan</td>
+                  <td><span class="status-badge delivered" style="font-size: 0.75rem;">Terkirim</span></td>
+                  <td>Selesai</td>
+                  <td>
+                    <button type="button" class="btn btn-outline btn-sm"
+                      onclick="switchTab('tracking'); executeTrackingSearch('VELO-5591023-EX');">
+                      Lacak
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       AUTHENTICATION MODAL (LOGIN / REGISTER)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="authModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+
+      <!-- Close Button -->
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Jendela">
+        <svg class="icon icon-sm" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="modal-header-hero">
+        <div class="modal-brand-badge">
+          <img src="assets/logo.jpg" alt="VeloShip" class="modal-brand-logo">
+          <span style="font-weight: 800; font-size: 1.25rem; color: var(--slate-900);">Velo<span
+              style="color: var(--velo-orange);">Ship</span></span>
+        </div>
+        <h3 class="modal-title">Akses Akun Pelanggan</h3>
+        <p class="modal-subtitle">Fast, Safe, and Always on Time</p>
+      </div>
+
+      <!-- Tab Switcher (Masuk / Daftar) -->
+      <div class="modal-tab-nav">
+        <button type="button" class="modal-tab-btn active" id="authTabLoginBtn">Masuk Akun</button>
+        <button type="button" class="modal-tab-btn" id="authTabRegisterBtn">Daftar Baru</button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Form 1: Masuk (Login) -->
+        <form id="authLoginForm" class="auth-form-tab active">
+
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Alamat Email</label>
+            <div class="input-with-icon">
+              <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <input type="email" id="loginEmail" class="input-control" placeholder="nama@perusahaan.com"
+                value="vincent@veloship.id" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">
+              <span>Kata Sandi</span>
+              <a href="#" class="link-styled"
+                onclick="showToast('Tautan atur ulang sandi telah dikirim ke email.', 'info'); return false;">Lupa
+                Sandi?</a>
+            </label>
+            <div class="input-with-icon">
+              <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="loginPassword" class="input-control" placeholder="Masukkan kata sandi"
+                value="VeloShip2026!" required>
+              <button type="button" class="toggle-password-btn" data-target-input="loginPassword"
+                style="position: absolute; right: 0.95rem; color: var(--slate-400);">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-footer-help">
+            <label class="form-check">
+              <input type="checkbox" checked>
+              <span>Ingat saya di perangkat ini</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 0.85rem;">
+            <span>Masuk ke VeloShip</span>
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <!-- 1-Click Demo Login Button -->
+          <button type="button" id="demoLoginBtn" class="btn btn-outline" style="width: 100%; font-size: 0.82rem;">
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Masuk Cepat (Akun Demo Pengujian)</span>
+          </button>
+
+          <div class="auth-divider">
+            <span>atau masuk dengan</span>
+          </div>
+
+          <div class="social-auth-grid">
+            <button type="button" class="btn-social"
+              onclick="showToast('Autentikasi SSO Google berhasil terhubung.', 'success'); handleLoginSuccess({ name: 'Vincent Pratama', email: 'vincent@google.com', plan: 'Member Google SSO' });">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v8"></path>
+                <path d="M8 12h8"></path>
+              </svg>
+              <span>Google</span>
+            </button>
+            <button type="button" class="btn-social"
+              onclick="showToast('Autentikasi SSO Perusahaan berhasil terhubung.', 'success'); handleLoginSuccess({ name: 'Akun Korporat', email: 'corporate@veloship.id', plan: 'Enterprise B2B' });">
+              <svg class="icon icon-sm" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Corporate SSO</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Form 2: Daftar (Register) -->
+        <form id="authRegisterForm" class="auth-form-tab">
+          <div class="form-group">
+            <label class="form-label" for="regName">Nama Lengkap</label>
+            <div class="input-with-icon">
+              <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <input type="text" id="regName" class="input-control" placeholder="Contoh: Vincent Pratama" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Alamat Email</label>
+            <div class="input-with-icon">
+              <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              </svg>
+              <input type="email" id="regEmail" class="input-control" placeholder="email@domain.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regPassword">Kata Sandi Baru</label>
+            <div class="input-with-icon">
+              <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="regPassword" class="input-control" placeholder="Minimal 8 karakter" required>
+              <button type="button" class="toggle-password-btn" data-target-input="regPassword"
+                style="position: absolute; right: 0.95rem; color: var(--slate-400);">
+                <svg class="icon icon-sm" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regConfirmPassword">Ulangi Kata Sandi</label>
+            <div class="input-with-icon">
+              <svg class="icon icon-sm input-icon-left" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="regConfirmPassword" class="input-control" placeholder="Ketik ulang kata sandi"
+                required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-orange" style="width: 100%;">
+            <span>Buat Akun Sekarang</span>
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST CONTAINER
+       ========================================================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="assets/logo.jpg" alt="VeloShip" style="width: 40px; height: 40px; border-radius: 8px;">
+            <div class="footer-brand-title">Velo<span style="color: var(--velo-orange);">Ship</span></div>
+          </div>
+          <div class="footer-brand-slogan">Fast, Safe, and Always on Time</div>
+          <p class="footer-desc">
+            Penyedia infrastruktur dan layanan logistik terpadu dengan standar keamanan kelas dunia, kecepatan
+            prioritas, serta jaminan ketepatan waktu pengantaran.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.82rem; color: var(--slate-400); line-height: 1.5;">
+            <strong>Kantor Pusat:</strong><br>
+            Jl. Green Lake City Boulevard, RT.005/RW.008, Gondrong, Kec. Cipondoh, Kota Tangerang, Banten 15147
+          </div>
+        </div>
+
+        <!-- Col 2: Navigasi Cepat -->
+        <div>
+          <h4 class="footer-column-title">Navigasi Tab</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home" class="footer-nav-link" data-target-tab="home">Beranda</a></li>
+            <li><a href="#tracking" class="footer-nav-link" data-target-tab="tracking">Lacak Kiriman</a></li>
+            <li><a href="#services" class="footer-nav-link" data-target-tab="services">Pilihan Layanan</a></li>
+            <li><a href="#rates" class="footer-nav-link" data-target-tab="rates">Kalkulator Biaya</a></li>
+            <li><a href="#promos" class="footer-nav-link" data-target-tab="promos">Promo & Garansi</a></li>
+            <li><a href="#about" class="footer-nav-link" data-target-tab="about">Tentang Kami</a></li>
+            <li><a href="#contact" class="footer-nav-link" data-target-tab="contact">Kontak CS</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Layanan Logistik -->
+        <div>
+          <h4 class="footer-column-title">Layanan Ekspedisi</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link" data-target-tab="services">Velo Regular (2 - 3 Hari)</a>
+            </li>
+            <li><a href="#services" class="footer-nav-link" data-target-tab="services">Velo Express (24 Jam Garansi)</a>
+            </li>
+            <li><a href="#services" class="footer-nav-link" data-target-tab="services">Velo Business (B2B & UMKM)</a>
+            </li>
+            <li><a href="#services" class="footer-nav-link" data-target-tab="services">Velo Cargo (Muatan Besar)</a>
+            </li>
+            <li><a href="#promos" class="footer-nav-link" data-target-tab="promos">Garansi 100% Tepat Waktu</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Akun & Bantuan -->
+        <div>
+          <h4 class="footer-column-title">Customer Service WhatsApp</h4>
+          <p style="font-size: 0.85rem; color: var(--slate-400); margin-bottom: 0.85rem;">
+            Dukungan resmi 24 jam respons instan via WhatsApp:
+          </p>
+          <a href="https://wa.me/6281517666126" target="_blank" class="btn btn-whatsapp btn-sm"
+            style="margin-bottom: 1rem; width: 100%;">
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+              </path>
+            </svg>
+            <span>WA: 0815-1766-6126</span>
+          </a>
+          <button type="button" class="btn btn-outline btn-sm open-login-modal-btn"
+            style="background: transparent; color: white; border-color: var(--slate-700); width: 100%;">
+            <svg class="icon icon-sm" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Masuk Akun VeloShip</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>VeloShip Inc.</strong> Hak cipta dilindungi undang-undang. Slogan: Fast, Safe, and Always
+          on Time.
+        </div>
+        <div style="display: flex; gap: 1.5rem; color: var(--slate-500);">
+          <span>Privasi & Keamanan</span>
+          <span>Syarat & Ketentuan Pengiriman</span>
+          <span>Status Sistem Logistik</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Support Button -->
+  <a href="https://wa.me/6281517666126?text=Halo%20Customer%20Service%20VeloShip,%20saya%20ingin%20bertanya%20seputar%20layanan%20pengiriman."
+    target="_blank" class="floating-whatsapp-btn" aria-label="Hubungi WhatsApp Customer Service VeloShip">
+    <span class="wa-pulse-dot"></span>
+    <svg class="icon icon-md" viewBox="0 0 24 24">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+      </path>
+    </svg>
+    <span>Chat CS: 0815-1766-6126</span>
+  </a>
+
+  <!-- Core JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
